@@ -43,6 +43,9 @@ html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink);
 .form-row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; font-size: 0.9rem; color: var(--muted); }
 .form-row input, .form-row select { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; background: #fff; }
 .form-row input:focus, .form-row select:focus { outline: none; border-color: var(--cinnabar); }
+.date-group, .time-group { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.date-group select, .time-group select { flex: 1 1 0; min-width: 0; padding: 8px 4px; text-align: center; }
+.unit { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
 .btn-primary { width: 100%; background: var(--cinnabar); color: #fff; border: none; padding: 12px; border-radius: 8px; font-size: 1rem; cursor: pointer; font-weight: 600; letter-spacing: 1px; }
 .btn-primary:hover { background: #8f1a1a; }
 .examples { display: flex; flex-wrap: wrap; gap: 8px; }

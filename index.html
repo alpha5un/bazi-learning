@@ -28,11 +28,18 @@
         <h2>出生信息</h2>
         <label class="form-row">
           <span>阳历日期</span>
-          <input type="date" id="inp-date" value="1990-03-15">
+          <div class="date-group">
+            <select id="inp-year" aria-label="年"></select><span class="unit">年</span>
+            <select id="inp-month" aria-label="月"></select><span class="unit">月</span>
+            <select id="inp-day" aria-label="日"></select><span class="unit">日</span>
+          </div>
         </label>
         <label class="form-row">
           <span>出生时间</span>
-          <input type="time" id="inp-time" value="14:30">
+          <div class="time-group">
+            <select id="inp-hour" aria-label="时"></select><span class="unit">时</span>
+            <select id="inp-minute" aria-label="分"></select><span class="unit">分</span>
+          </div>
         </label>
         <label class="form-row">
           <span>性别</span>
