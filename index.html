@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>四柱八字互动式学习系统</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <h1>四柱八字互动式学习系统</h1>
+      <div class="header-meta">
+        <span class="tag">子平派</span>
+        <span class="tag">渐进式</span>
+        <span class="tag">可推导</span>
+        <button id="btn-expand-all" class="btn-expand">一键展开</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-body">
+    <aside class="input-panel">
+      <div class="panel-card">
+        <h2>出生信息</h2>
+        <label class="form-row">
+          <span>阳历日期</span>
+          <input type="date" id="inp-date" value="1990-03-15">
+        </label>
+        <label class="form-row">
+          <span>出生时间</span>
+          <input type="time" id="inp-time" value="14:30">
+        </label>
+        <label class="form-row">
+          <span>性别</span>
+          <select id="inp-gender">
+            <option value="male">男</option>
+            <option value="female">女</option>
+          </select>
+        </label>
+        <label class="form-row">
+          <span>出生地经度</span>
+          <input type="number" id="inp-longitude" value="116.4" step="0.1">
+        </label>
+        <button id="btn-calc" class="btn-primary">开始排盘</button>
+
+        <div class="examples">
+          <h3>快速示例</h3>
+          <button class="example" data-date="1990-03-15" data-time="14:30" data-gender="male" data-lon="116.4">1990·北京西</button>
+          <button class="example" data-date="2026-07-13" data-time="11:30" data-gender="male" data-lon="120">今日·北京时间</button>
+          <button class="example" data-date="1984-02-04" data-time="22:00" data-gender="male" data-lon="120">1984·立春</button>
+        </div>
+      </div>
+
+      <div class="panel-card legend">
+        <h3>五行图例</h3>
+        <div class="legend-items">
+          <span class="legend-item"><i class="dot" style="background:#4a7c59"></i>木</span>
+          <span class="legend-item"><i class="dot" style="background:#c0392b"></i>火</span>
+          <span class="legend-item"><i class="dot" style="background:#b08d57"></i>土</span>
+          <span class="legend-item"><i class="dot" style="background:#d4af37"></i>金</span>
+          <span class="legend-item"><i class="dot" style="background:#2e6da4"></i>水</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section id="pillars-strip" class="pillars-strip" aria-label="四柱"></section>
+      <section id="layers" class="layers" aria-label="七层架构"></section>
+      <section id="knowledge-panel" class="knowledge-panel" aria-label="横向知识">
+        <div class="knowledge-header">
+          <h3 id="knowledge-title">横向知识</h3>
+          <button id="knowledge-close" class="knowledge-close" aria-label="关闭">×</button>
+        </div>
+        <div id="knowledge-content" class="knowledge-content">
+          <p>点击推导中的<span class="term-inline">蓝色术语</span>，查看概念定义、出处、公式与案例。</p>
+        </div>
+      </section>
+      <div id="knowledge-overlay" class="knowledge-overlay" hidden></div>
+      <button id="knowledge-trigger" class="knowledge-trigger" hidden>横向知识</button>
+    </main>
+  </div>
+
+  <footer class="app-footer">
+    <p>本系统为八字学习工具，结果基于子平派算法与万年历数据，仅供学习参考。</p>
+  </footer>
+
+  <script src="lib/lunar.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
