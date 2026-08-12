@@ -315,7 +315,7 @@ export function computeDivineSigns(pillars, hidden, fiveElements) {
   const signs = [];
 
   // 天乙贵人
-  const tianYiMap = { 甲: '丑未', 戊: '丑未', 乙: '子申', 己: '子申', 丙: '亥酉', 丁: '亥酉', 壬: '卯巳', 癸: '卯巳', 庚: '寅午', 辛: '寅午' };
+  const tianYiMap = { 甲: '丑未', 戊: '丑未', 乙: '子申', 己: '子申', 丙: '亥酉', 丁: '亥酉', 壬: '卯巳', 癸: '卯巳', 庚: '丑未', 辛: '寅午' };
   const tianYiBranches = tianYiMap[dayStem] || '';
   tianYiBranches.split('').forEach(b => {
     if (branchSet.has(b)) signs.push({ name: '天乙贵人', type: '大吉', position: b, method: `${dayStem}日贵人位在${tianYiBranches}`, meaning: '遇难呈祥，贵人提携' });
